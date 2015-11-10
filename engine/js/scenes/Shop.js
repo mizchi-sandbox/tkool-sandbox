@@ -1,4 +1,4 @@
-import Scene_MenuBase from './SceneMenuBase';
+import Scene_MenuBase from './MenuBase';
 import {
   Stage, Graphics, Sprite, Bitmap, WindowLayer, ScreenSprite, TouchInput, Input
 } from '../core';

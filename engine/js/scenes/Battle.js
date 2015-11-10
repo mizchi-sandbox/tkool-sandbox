@@ -1,4 +1,4 @@
-import Scene_Base from './SceneBase';
+import Scene_Base from './Base';
 import {
   Stage, Graphics, Sprite, Bitmap, WindowLayer, ScreenSprite, TouchInput, Input
 } from '../core';
