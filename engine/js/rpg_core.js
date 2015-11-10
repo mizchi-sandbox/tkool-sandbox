@@ -1,3 +1,5 @@
+import * as GameObjects from './rpg_objects';
+
 //=============================================================================
 // rpg_core.js
 //=============================================================================
@@ -7783,7 +7785,8 @@ JsonEx._decode = function(value) {
     var type = Object.prototype.toString.call(value);
     if (type === '[object Object]' || type === '[object Array]') {
         if (value['@']) {
-            var constructor = window[value['@']];
+            // var constructor = window[value['@']];
+            var constructor = GameObjects[value['@']];
             if (constructor) {
                 value = this._resetPrototype(value, constructor.prototype);
             }
