@@ -1,5 +1,6 @@
-import {Graphics, Utils, WebAudio, Input, TouchInput, JsonEx} from './core';
-import {Bitmap, TilingSprite} from './core';
+import {
+  Graphics, Utils, WebAudio, Input, TouchInput, JsonEx, Bitmap, TilingSprite
+} from './core';
 import {
   Game_Temp, Game_System, Game_Screen,
   Game_Timer, Game_Message, Game_Switches,

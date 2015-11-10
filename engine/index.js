@@ -4,7 +4,6 @@
 require("./js/core");
 require("./js/managers");
 require("./js/objects");
-require("./js/scenes");
 require("./js/sprites");
 require("./js/windows");
 require("./js/plugins");
