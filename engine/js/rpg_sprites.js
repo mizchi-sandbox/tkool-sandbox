@@ -1,3 +1,5 @@
+import {Sprite, Graphics, ScreenSprite, TilingSprite, Tilemap, Bitmap, Weather, ToneFilter, Rectangle} from './rpg_core';
+import {ImageManager} from './rpg_managers';
 //=============================================================================
 // rpg_sprites.js
 //=============================================================================
@@ -7,7 +9,7 @@
 //
 // The sprite class with a feature which displays animations.
 
-function Sprite_Base() {
+export function Sprite_Base() {
     this.initialize.apply(this, arguments);
 }
 
@@ -72,7 +74,7 @@ Sprite_Base.prototype.isAnimationPlaying = function() {
 //
 // The sprite for displaying a button.
 
-function Sprite_Button() {
+export function Sprite_Button() {
     this.initialize.apply(this, arguments);
 }
 
@@ -181,7 +183,7 @@ Sprite_Button.prototype.canvasToLocalY = function(y) {
 //
 // The sprite for displaying a character.
 
-function Sprite_Character() {
+export function Sprite_Character() {
     this.initialize.apply(this, arguments);
 }
 
@@ -449,7 +451,7 @@ Sprite_Character.prototype.isBalloonPlaying = function() {
 //
 // The superclass of Sprite_Actor and Sprite_Enemy.
 
-function Sprite_Battler() {
+export function Sprite_Battler() {
     this.initialize.apply(this, arguments);
 }
 
@@ -639,7 +641,7 @@ Sprite_Battler.prototype.inHomePosition = function() {
 //
 // The sprite for displaying an actor.
 
-function Sprite_Actor() {
+export function Sprite_Actor() {
     this.initialize.apply(this, arguments);
 }
 
@@ -909,7 +911,7 @@ Sprite_Actor.prototype.damageOffsetY = function() {
 //
 // The sprite for displaying an enemy.
 
-function Sprite_Enemy() {
+export function Sprite_Enemy() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1167,7 +1169,7 @@ Sprite_Enemy.prototype.damageOffsetY = function() {
 //
 // The sprite for displaying an animation.
 
-function Sprite_Animation() {
+export function Sprite_Animation() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1471,7 +1473,7 @@ Sprite_Animation.prototype.startHiding = function(duration) {
 //
 // The sprite for displaying a popup damage.
 
-function Sprite_Damage() {
+export function Sprite_Damage() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1591,7 +1593,7 @@ Sprite_Damage.prototype.isPlaying = function() {
 //
 // The sprite for displaying state icons.
 
-function Sprite_StateIcon() {
+export function Sprite_StateIcon() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1669,7 +1671,7 @@ Sprite_StateIcon.prototype.updateFrame = function() {
 //
 // The sprite for displaying an overlay image for a state.
 
-function Sprite_StateOverlay() {
+export function Sprite_StateOverlay() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1739,7 +1741,7 @@ Sprite_StateOverlay.prototype.updateFrame = function() {
 //
 // The sprite for displaying a weapon image for attacking.
 
-function Sprite_Weapon() {
+export function Sprite_Weapon() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1820,7 +1822,7 @@ Sprite_Weapon.prototype.isPlaying = function() {
 //
 // The sprite for displaying a balloon icon.
 
-function Sprite_Balloon() {
+export function Sprite_Balloon() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1891,7 +1893,7 @@ Sprite_Balloon.prototype.isPlaying = function() {
 //
 // The sprite for displaying a picture.
 
-function Sprite_Picture() {
+export function Sprite_Picture() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1985,7 +1987,7 @@ Sprite_Picture.prototype.loadBitmap = function() {
 //
 // The sprite for displaying the timer.
 
-function Sprite_Timer() {
+export function Sprite_Timer() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2046,7 +2048,7 @@ Sprite_Timer.prototype.updateVisibility = function() {
 //
 // The sprite for displaying the destination place of the touch input.
 
-function Sprite_Destination() {
+export function Sprite_Destination() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2103,7 +2105,7 @@ Sprite_Destination.prototype.updateAnimation = function() {
 //
 // The superclass of Spriteset_Map and Spriteset_Battle.
 
-function Spriteset_Base() {
+export function Spriteset_Base() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2240,7 +2242,7 @@ Spriteset_Base.prototype.updatePosition = function() {
 //
 // The set of sprites on the map screen.
 
-function Spriteset_Map() {
+export function Spriteset_Map() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2386,7 +2388,7 @@ Spriteset_Map.prototype.updateWeather = function() {
 //
 // The set of sprites on the battle screen.
 
-function Spriteset_Battle() {
+export function Spriteset_Battle() {
     this.initialize.apply(this, arguments);
 }
 

@@ -1,3 +1,19 @@
+import {Stage, Graphics, Sprite, Bitmap, WindowLayer, ScreenSprite, TouchInput, Input} from './rpg_core';
+import {
+  DataManager, ConfigManager, ImageManager, SoundManager, SceneManager, AudioManager,TextManager} from './rpg_managers';
+import {
+  Window_TitleCommand, Window_MapName, Window_Message, Window_ScrollText,
+  Window_MenuStatus, Window_MenuCommand, Window_Gold,
+  Window_Help, Window_ItemCategory, Window_ItemList,Window_MenuActor,
+  Window_SkillType, Window_SkillStatus, Window_SkillList,
+  Window_EquipStatus, Window_EquipCommand, Window_EquipSlot, Window_EquipItem,
+  Window_Status, Window_Options,
+  Window_SavefileList,
+  Window_GameEnd
+} from './rpg_windows';
+import {Spriteset_Map} from './rpg_sprites';
+import {Game_Action} from './rpg_objects';
+
 //=============================================================================
 // rpg_scenes.js
 //=============================================================================
@@ -7,7 +23,7 @@
 //
 // The superclass of all scenes within the game.
 
-function Scene_Base() {
+export function Scene_Base() {
     this.initialize.apply(this, arguments);
 }
 
@@ -145,7 +161,7 @@ Scene_Base.prototype.slowFadeSpeed = function() {
 //
 // The scene class for initializing the entire game.
 
-function Scene_Boot() {
+export function Scene_Boot() {
     this.initialize.apply(this, arguments);
 }
 
@@ -230,7 +246,7 @@ Scene_Boot.prototype.checkPlayerLocation = function() {
 //
 // The scene class of the title screen.
 
-function Scene_Title() {
+export function Scene_Title() {
     this.initialize.apply(this, arguments);
 }
 
@@ -343,7 +359,7 @@ Scene_Title.prototype.playTitleMusic = function() {
 //
 // The scene class of the map screen.
 
-function Scene_Map() {
+export function Scene_Map() {
     this.initialize.apply(this, arguments);
 }
 
@@ -692,7 +708,7 @@ Scene_Map.prototype.encounterEffectSpeed = function() {
 //
 // The superclass of all the menu-type scenes.
 
-function Scene_MenuBase() {
+export function Scene_MenuBase() {
     this.initialize.apply(this, arguments);
 }
 
@@ -753,7 +769,7 @@ Scene_MenuBase.prototype.onActorChange = function() {
 //
 // The scene class of the menu screen.
 
-function Scene_Menu() {
+export function Scene_Menu() {
     this.initialize.apply(this, arguments);
 }
 
@@ -881,7 +897,7 @@ Scene_Menu.prototype.onFormationCancel = function() {
 //
 // The superclass of Scene_Item and Scene_Skill.
 
-function Scene_ItemBase() {
+export function Scene_ItemBase() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1012,7 +1028,7 @@ Scene_ItemBase.prototype.checkCommonEvent = function() {
 //
 // The scene class of the item screen.
 
-function Scene_Item() {
+export function Scene_Item() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1093,7 +1109,7 @@ Scene_Item.prototype.useItem = function() {
 //
 // The scene class of the skill screen.
 
-function Scene_Skill() {
+export function Scene_Skill() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1193,7 +1209,7 @@ Scene_Skill.prototype.onActorChange = function() {
 //
 // The scene class of the equipment screen.
 
-function Scene_Equip() {
+export function Scene_Equip() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1324,7 +1340,7 @@ Scene_Equip.prototype.onActorChange = function() {
 //
 // The scene class of the status screen.
 
-function Scene_Status() {
+export function Scene_Status() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1360,7 +1376,7 @@ Scene_Status.prototype.onActorChange = function() {
 //
 // The scene class of the options screen.
 
-function Scene_Options() {
+export function Scene_Options() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1392,7 +1408,7 @@ Scene_Options.prototype.createOptionsWindow = function() {
 //
 // The superclass of Scene_Save and Scene_Load.
 
-function Scene_File() {
+export function Scene_File() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1464,7 +1480,7 @@ Scene_File.prototype.onSavefileOk = function() {
 //
 // The scene class of the save screen.
 
-function Scene_Save() {
+export function Scene_Save() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1512,7 +1528,7 @@ Scene_Save.prototype.onSaveFailure = function() {
 //
 // The scene class of the load screen.
 
-function Scene_Load() {
+export function Scene_Load() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1577,7 +1593,7 @@ Scene_Load.prototype.reloadMapIfUpdated = function() {
 //
 // The scene class of the game end screen.
 
-function Scene_GameEnd() {
+export function Scene_GameEnd() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1620,7 +1636,7 @@ Scene_GameEnd.prototype.commandToTitle = function() {
 //
 // The scene class of the shop screen.
 
-function Scene_Shop() {
+export function Scene_Shop() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1882,7 +1898,7 @@ Scene_Shop.prototype.sellingPrice = function() {
 //
 // The scene class of the name input screen.
 
-function Scene_Name() {
+export function Scene_Name() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1931,7 +1947,7 @@ Scene_Name.prototype.onInputOk = function() {
 //
 // The scene class of the debug screen.
 
-function Scene_Debug() {
+export function Scene_Debug() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2009,7 +2025,7 @@ Scene_Debug.prototype.helpText = function() {
 //
 // The scene class of the battle screen.
 
-function Scene_Battle() {
+export function Scene_Battle() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2412,7 +2428,7 @@ Scene_Battle.prototype.endCommandSelection = function() {
 //
 // The scene class of the game over screen.
 
-function Scene_Gameover() {
+export function Scene_Gameover() {
     this.initialize.apply(this, arguments);
 }
 

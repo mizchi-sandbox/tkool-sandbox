@@ -1,3 +1,8 @@
+import {Window, Bitmap, Rectangle, Graphics, Input, TouchInput, JsonEx} from './rpg_core';
+import {TextManager, DataManager, ImageManager, SoundManager, ConfigManager} from './rpg_managers';
+import {Sprite_Button} from './rpg_sprites';
+import {Game_Action} from './rpg_objects';
+
 //=============================================================================
 // rpg_windows.js
 //=============================================================================
@@ -7,7 +12,7 @@
 //
 // The superclass of all windows within the game.
 
-function Window_Base() {
+export function Window_Base() {
     this.initialize.apply(this, arguments);
 }
 
@@ -707,7 +712,7 @@ Window_Base.prototype.canvasToLocalY = function(y) {
 //
 // The window class with cursor movement and scroll functions.
 
-function Window_Selectable() {
+export function Window_Selectable() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1283,7 +1288,7 @@ Window_Selectable.prototype.refresh = function() {
 //
 // The superclass of windows for selecting a command.
 
-function Window_Command() {
+export function Window_Command() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1437,7 +1442,7 @@ Window_Command.prototype.refresh = function() {
 //
 // The command window for the horizontal selection format.
 
-function Window_HorzCommand() {
+export function Window_HorzCommand() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1465,7 +1470,7 @@ Window_HorzCommand.prototype.itemTextAlign = function() {
 //
 // The window for displaying the description of the selected item.
 
-function Window_Help() {
+export function Window_Help() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1504,7 +1509,7 @@ Window_Help.prototype.refresh = function() {
 //
 // The window for displaying the party's gold.
 
-function Window_Gold() {
+export function Window_Gold() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1551,7 +1556,7 @@ Window_Gold.prototype.open = function() {
 //
 // The window for selecting a command on the menu screen.
 
-function Window_MenuCommand() {
+export function Window_MenuCommand() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1686,7 +1691,7 @@ Window_MenuCommand.prototype.selectLast = function() {
 //
 // The window for displaying party member status on the menu screen.
 
-function Window_MenuStatus() {
+export function Window_MenuStatus() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1805,7 +1810,7 @@ Window_MenuStatus.prototype.setPendingIndex = function(index) {
 //
 // The window for selecting a target actor on the item and skill screens.
 
-function Window_MenuActor() {
+export function Window_MenuActor() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1854,7 +1859,7 @@ Window_MenuActor.prototype.selectForItem = function(item) {
 //
 // The window for selecting a category of items on the item and shop screens.
 
-function Window_ItemCategory() {
+export function Window_ItemCategory() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1897,7 +1902,7 @@ Window_ItemCategory.prototype.setItemWindow = function(itemWindow) {
 //
 // The window for selecting an item on the item screen.
 
-function Window_ItemList() {
+export function Window_ItemList() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2015,7 +2020,7 @@ Window_ItemList.prototype.refresh = function() {
 //
 // The window for selecting a skill type on the skill screen.
 
-function Window_SkillType() {
+export function Window_SkillType() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2082,7 +2087,7 @@ Window_SkillType.prototype.selectLast = function() {
 //
 // The window for displaying the skill user's status on the skill screen.
 
-function Window_SkillStatus() {
+export function Window_SkillStatus() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2118,7 +2123,7 @@ Window_SkillStatus.prototype.refresh = function() {
 //
 // The window for selecting a skill on the skill screen.
 
-function Window_SkillList() {
+export function Window_SkillList() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2239,7 +2244,7 @@ Window_SkillList.prototype.refresh = function() {
 //
 // The window for displaying parameter changes on the equipment screen.
 
-function Window_EquipStatus() {
+export function Window_EquipStatus() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2329,7 +2334,7 @@ Window_EquipStatus.prototype.drawNewParam = function(x, y, paramId) {
 //
 // The window for selecting a command on the equipment screen.
 
-function Window_EquipCommand() {
+export function Window_EquipCommand() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2360,7 +2365,7 @@ Window_EquipCommand.prototype.makeCommandList = function() {
 //
 // The window for selecting an equipment slot on the equipment screen.
 
-function Window_EquipSlot() {
+export function Window_EquipSlot() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2442,7 +2447,7 @@ Window_EquipSlot.prototype.updateHelp = function() {
 //
 // The window for selecting an equipment item on the equipment screen.
 
-function Window_EquipItem() {
+export function Window_EquipItem() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2492,11 +2497,13 @@ Window_EquipItem.prototype.setStatusWindow = function(statusWindow) {
     this._statusWindow = statusWindow;
     this.callUpdateHelp();
 };
-
+import cloneDeep from 'lodash.clonedeep';
 Window_EquipItem.prototype.updateHelp = function() {
     Window_ItemList.prototype.updateHelp.call(this);
     if (this._actor && this._statusWindow) {
         var actor = JsonEx.makeDeepCopy(this._actor);
+        // TODO actor.forceChangeEquip is not function
+        // JsonEx doesnt work correctly
         actor.forceChangeEquip(this._slotId, this.item());
         this._statusWindow.setTempActor(actor);
     }
@@ -2510,7 +2517,7 @@ Window_EquipItem.prototype.playOkSound = function() {
 //
 // The window for displaying full status on the status screen.
 
-function Window_Status() {
+export function Window_Status() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2637,7 +2644,7 @@ Window_Status.prototype.maxEquipmentLines = function() {
 //
 // The window for changing various settings on the options screen.
 
-function Window_Options() {
+export function Window_Options() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2783,7 +2790,7 @@ Window_Options.prototype.setConfigValue = function(symbol, volume) {
 //
 // The window for selecting a save file on the save and load screens.
 
-function Window_SavefileList() {
+export function Window_SavefileList() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2878,7 +2885,7 @@ Window_SavefileList.prototype.playOkSound = function() {
 //
 // The window for selecting buy/sell on the shop screen.
 
-function Window_ShopCommand() {
+export function Window_ShopCommand() {
     this.initialize.apply(this, arguments);
 }
 
@@ -2910,7 +2917,7 @@ Window_ShopCommand.prototype.makeCommandList = function() {
 //
 // The window for selecting an item to buy on the shop screen.
 
-function Window_ShopBuy() {
+export function Window_ShopBuy() {
     this.initialize.apply(this, arguments);
 }
 
@@ -3014,7 +3021,7 @@ Window_ShopBuy.prototype.updateHelp = function() {
 //
 // The window for selecting an item to sell on the shop screen.
 
-function Window_ShopSell() {
+export function Window_ShopSell() {
     this.initialize.apply(this, arguments);
 }
 
@@ -3035,7 +3042,7 @@ Window_ShopSell.prototype.isEnabled = function(item) {
 // The window for inputting quantity of items to buy or sell on the shop
 // screen.
 
-function Window_ShopNumber() {
+export function Window_ShopNumber() {
     this.initialize.apply(this, arguments);
 }
 
@@ -3260,7 +3267,7 @@ Window_ShopNumber.prototype.onButtonOk = function() {
 // The window for displaying number of items in possession and the actor's
 // equipment on the shop screen.
 
-function Window_ShopStatus() {
+export function Window_ShopStatus() {
     this.initialize.apply(this, arguments);
 }
 
@@ -3412,7 +3419,7 @@ Window_ShopStatus.prototype.changePage = function() {
 //
 // The window for editing an actor's name on the name input screen.
 
-function Window_NameEdit() {
+export function Window_NameEdit() {
     this.initialize.apply(this, arguments);
 }
 
@@ -3545,7 +3552,7 @@ Window_NameEdit.prototype.refresh = function() {
 //
 // The window for selecting text characters on the name input screen.
 
-function Window_NameInput() {
+export function Window_NameInput() {
     this.initialize.apply(this, arguments);
 }
 
@@ -3812,7 +3819,7 @@ Window_NameInput.prototype.onNameOk = function() {
 //
 // The window used for the event command [Show Choices].
 
-function Window_ChoiceList() {
+export function Window_ChoiceList() {
     this.initialize.apply(this, arguments);
 }
 
@@ -3946,7 +3953,7 @@ Window_ChoiceList.prototype.callCancelHandler = function() {
 //
 // The window used for the event command [Input Number].
 
-function Window_NumberInput() {
+export function Window_NumberInput() {
     this.initialize.apply(this, arguments);
 }
 
@@ -4162,7 +4169,7 @@ Window_NumberInput.prototype.onButtonOk = function() {
 //
 // The window used for the event command [Select Item].
 
-function Window_EventItem() {
+export function Window_EventItem() {
     this.initialize.apply(this, arguments);
 }
 
@@ -4232,7 +4239,7 @@ Window_EventItem.prototype.onCancel = function() {
 //
 // The window for displaying text messages.
 
-function Window_Message() {
+export function Window_Message() {
     this.initialize.apply(this, arguments);
 }
 
@@ -4561,7 +4568,7 @@ Window_Message.prototype.startPause = function() {
 // The window for displaying scrolling text. No frame is displayed, but it
 // is handled as a window for convenience.
 
-function Window_ScrollText() {
+export function Window_ScrollText() {
     this.initialize.apply(this, arguments);
 }
 
@@ -4649,7 +4656,7 @@ Window_ScrollText.prototype.terminateMessage = function() {
 //
 // The window for displaying the map name on the map screen.
 
-function Window_MapName() {
+export function Window_MapName() {
     this.initialize.apply(this, arguments);
 }
 
@@ -4723,7 +4730,7 @@ Window_MapName.prototype.drawBackground = function(x, y, width, height) {
 // The window for displaying battle progress. No frame is displayed, but it is
 // handled as a window for convenience.
 
-function Window_BattleLog() {
+export function Window_BattleLog() {
     this.initialize.apply(this, arguments);
 }
 
@@ -5311,7 +5318,7 @@ Window_BattleLog.prototype.makeTpDamageText = function(target) {
 //
 // The window for selecting whether to fight or escape on the battle screen.
 
-function Window_PartyCommand() {
+export function Window_PartyCommand() {
     this.initialize.apply(this, arguments);
 }
 
@@ -5352,7 +5359,7 @@ Window_PartyCommand.prototype.setup = function() {
 //
 // The window for selecting an actor's action on the battle screen.
 
-function Window_ActorCommand() {
+export function Window_ActorCommand() {
     this.initialize.apply(this, arguments);
 }
 
@@ -5440,7 +5447,7 @@ Window_ActorCommand.prototype.selectLast = function() {
 //
 // The window for displaying the status of party members on the battle screen.
 
-function Window_BattleStatus() {
+export function Window_BattleStatus() {
     this.initialize.apply(this, arguments);
 }
 
@@ -5530,7 +5537,7 @@ Window_BattleStatus.prototype.drawGaugeAreaWithoutTp = function(rect, actor) {
 //
 // The window for selecting a target actor on the battle screen.
 
-function Window_BattleActor() {
+export function Window_BattleActor() {
     this.initialize.apply(this, arguments);
 }
 
@@ -5569,7 +5576,7 @@ Window_BattleActor.prototype.actor = function() {
 //
 // The window for selecting a target enemy on the battle screen.
 
-function Window_BattleEnemy() {
+export function Window_BattleEnemy() {
     this.initialize.apply(this, arguments);
 }
 
@@ -5647,7 +5654,7 @@ Window_BattleEnemy.prototype.select = function(index) {
 //
 // The window for selecting a skill to use on the battle screen.
 
-function Window_BattleSkill() {
+export function Window_BattleSkill() {
     this.initialize.apply(this, arguments);
 }
 
@@ -5675,7 +5682,7 @@ Window_BattleSkill.prototype.hide = function() {
 //
 // The window for selecting an item to use on the battle screen.
 
-function Window_BattleItem() {
+export function Window_BattleItem() {
     this.initialize.apply(this, arguments);
 }
 
@@ -5707,7 +5714,7 @@ Window_BattleItem.prototype.hide = function() {
 //
 // The window for selecting New Game/Continue on the title screen.
 
-function Window_TitleCommand() {
+export function Window_TitleCommand() {
     this.initialize.apply(this, arguments);
 }
 
@@ -5764,7 +5771,7 @@ Window_TitleCommand.prototype.selectLast = function() {
 //
 // The window for selecting "Go to Title" on the game end screen.
 
-function Window_GameEnd() {
+export function Window_GameEnd() {
     this.initialize.apply(this, arguments);
 }
 
@@ -5797,7 +5804,7 @@ Window_GameEnd.prototype.makeCommandList = function() {
 //
 // The window for selecting a block of switches/variables on the debug screen.
 
-function Window_DebugRange() {
+export function Window_DebugRange() {
     this.initialize.apply(this, arguments);
 }
 
@@ -5894,7 +5901,7 @@ Window_DebugRange.prototype.setEditWindow = function(editWindow) {
 //
 // The window for displaying switches and variables on the debug screen.
 
-function Window_DebugEdit() {
+export function Window_DebugEdit() {
     this.initialize.apply(this, arguments);
 }
 

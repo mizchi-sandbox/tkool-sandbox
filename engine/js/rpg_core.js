@@ -9,7 +9,7 @@
  *
  * @class JsExtensions
  */
-function JsExtensions() {
+export function JsExtensions() {
     throw new Error('This is not a class');
 }
 
@@ -149,7 +149,7 @@ Math.randomInt = function(max) {
  *
  * @class Utils
  */
-function Utils() {
+export function Utils() {
     throw new Error('This is a static class');
 }
 
@@ -183,7 +183,8 @@ Utils.isOptionValid = function(name) {
  * @return {Boolean} True if the platform is NW.js
  */
 Utils.isNwjs = function() {
-    return typeof require === 'function' && typeof process === 'object';
+    return false; // TODO
+    // return typeof require === 'function' && typeof process === 'object';
 };
 
 /**
@@ -270,7 +271,7 @@ Utils.rgbToCssColor = function(r, g, b) {
  * @param {Number} x The x coordinate
  * @param {Number} y The y coordinate
  */
-function Point() {
+export function Point() {
     this.initialize.apply(this, arguments);
 }
 
@@ -306,7 +307,7 @@ Point.prototype.initialize = function(x, y) {
  * @param {Number} width The width of the rectangle
  * @param {Number} height The height of the rectangle
  */
-function Rectangle() {
+export function Rectangle() {
     this.initialize.apply(this, arguments);
 }
 
@@ -362,7 +363,7 @@ Rectangle.emptyRectangle = new Rectangle(0, 0, 0, 0);
  * @param {Number} width The width of the bitmap
  * @param {Number} height The height of the bitmap
  */
-function Bitmap() {
+export function Bitmap() {
     this.initialize.apply(this, arguments);
 }
 
@@ -1090,7 +1091,7 @@ Bitmap.prototype._setDirty = function() {
  *
  * @class Graphics
  */
-function Graphics() {
+export function Graphics() {
     throw new Error('This is a static class');
 }
 
@@ -2197,7 +2198,7 @@ Graphics._cancelFullScreen = function() {
  *
  * @class Input
  */
-function Input() {
+export function Input() {
     throw new Error('This is a static class');
 }
 
@@ -2678,7 +2679,7 @@ Input._isEscapeCompatible = function(keyName) {
  *
  * @class TouchInput
  */
-function TouchInput() {
+export function TouchInput() {
     throw new Error('This is a static class');
 }
 
@@ -3174,7 +3175,7 @@ TouchInput._onRelease = function(x, y) {
  * @constructor
  * @param {Bitmap} bitmap The image for the sprite
  */
-function Sprite() {
+export function Sprite() {
     this.initialize.apply(this, arguments);
 }
 
@@ -3727,7 +3728,7 @@ Sprite.prototype._renderWebGL = function(renderSession) {
  * @class Tilemap
  * @constructor
  */
-function Tilemap() {
+export function Tilemap() {
     this.initialize.apply(this, arguments);
 }
 
@@ -4674,7 +4675,7 @@ Tilemap.WATERFALL_AUTOTILE_TABLE = [
  * @constructor
  * @param {Bitmap} bitmap The image for the tiling sprite
  */
-function TilingSprite() {
+export function TilingSprite() {
     this.initialize.apply(this, arguments);
 }
 
@@ -4857,7 +4858,7 @@ TilingSprite.prototype._refresh = function() {
  * @class ScreenSprite
  * @constructor
  */
-function ScreenSprite() {
+export function ScreenSprite() {
     this.initialize.apply(this, arguments);
 }
 
@@ -4963,7 +4964,7 @@ ScreenSprite.prototype._renderCanvas = function(renderSession) {
  * @class Window
  * @constructor
  */
-function Window() {
+export function Window() {
     this.initialize.apply(this, arguments);
 }
 
@@ -5650,7 +5651,7 @@ Window.prototype._updatePauseSign = function() {
  * @class WindowLayer
  * @constructor
  */
-function WindowLayer() {
+export function WindowLayer() {
     this.initialize.apply(this, arguments);
 }
 
@@ -5978,7 +5979,7 @@ WindowLayer.prototype._webglMaskRect = function(renderSession, x, y, w, h) {
  * @class Weather
  * @constructor
  */
-function Weather() {
+export function Weather() {
     this.initialize.apply(this, arguments);
 }
 
@@ -6178,7 +6179,7 @@ Weather.prototype._rebornSprite = function(sprite) {
  * @class ToneFilter
  * @constructor
  */
-function ToneFilter() {
+export function ToneFilter() {
     PIXI.AbstractFilter.call(this);
     this.initialize.apply(this, arguments);
 }
@@ -6329,7 +6330,7 @@ ToneFilter.prototype._multiplyMatrix = function(matrix) {
  * @class ToneSprite
  * @constructor
  */
-function ToneSprite() {
+export function ToneSprite() {
     this.initialize.apply(this, arguments);
 }
 
@@ -6434,7 +6435,7 @@ ToneSprite.prototype._renderWebGL = function(renderSession) {
  * @class Stage
  * @constructor
  */
-function Stage() {
+export function Stage() {
     this.initialize.apply(this, arguments);
 }
 
@@ -6496,7 +6497,7 @@ Stage.prototype.initialize = function() {
  * @constructor
  * @param {String} url The url of the audio file
  */
-function WebAudio() {
+export function WebAudio() {
     this.initialize.apply(this, arguments);
 }
 
@@ -7251,7 +7252,7 @@ WebAudio.prototype._readFourCharacters = function(array, index) {
  * @class Html5Audio
  * @constructor
  */
-function Html5Audio() {
+export function Html5Audio() {
     throw new Error('This is a static class');
 }
 
@@ -7692,7 +7693,7 @@ Html5Audio._applyTweenValue = function (volume) {
  *
  * @class JsonEx
  */
-function JsonEx() {
+export function JsonEx() {
     throw new Error('This is a static class');
 }
 

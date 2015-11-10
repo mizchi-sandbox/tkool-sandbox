@@ -1,3 +1,13 @@
+import {Graphics, Utils, WebAudio, Input, TouchInput, JsonEx} from './rpg_core';
+import {Bitmap, TilingSprite} from './rpg_core';
+import {
+  Game_Temp, Game_System, Game_Screen,
+  Game_Timer, Game_Message, Game_Switches,
+  Game_Variables, Game_SelfSwitches,
+  Game_Actors, Game_Party, Game_Troop, Game_Map, Game_Player
+} from './rpg_objects';
+import {ScreenSprite} from './rpg_sprites';
+
 //=============================================================================
 // rpg_managers.js
 //=============================================================================
@@ -7,39 +17,39 @@
 //
 // The static class that manages the database and game objects.
 
-function DataManager() {
+export function DataManager() {
     throw new Error('This is a static class');
 }
 
-var $dataActors       = null;
-var $dataClasses      = null;
-var $dataSkills       = null;
-var $dataItems        = null;
-var $dataWeapons      = null;
-var $dataArmors       = null;
-var $dataEnemies      = null;
-var $dataTroops       = null;
-var $dataStates       = null;
-var $dataAnimations   = null;
-var $dataTilesets     = null;
-var $dataCommonEvents = null;
-var $dataSystem       = null;
-var $dataMapInfos     = null;
-var $dataMap          = null;
-var $gameTemp         = null;
-var $gameSystem       = null;
-var $gameScreen       = null;
-var $gameTimer        = null;
-var $gameMessage      = null;
-var $gameSwitches     = null;
-var $gameVariables    = null;
-var $gameSelfSwitches = null;
-var $gameActors       = null;
-var $gameParty        = null;
-var $gameTroop        = null;
-var $gameMap          = null;
-var $gamePlayer       = null;
-var $testEvent        = null;
+window.$dataActors       = null;
+window.$dataClasses      = null;
+window.$dataSkills       = null;
+window.$dataItems        = null;
+window.$dataWeapons      = null;
+window.$dataArmors       = null;
+window.$dataEnemies      = null;
+window.$dataTroops       = null;
+window.$dataStates       = null;
+window.$dataAnimations   = null;
+window.$dataTilesets     = null;
+window.$dataCommonEvents = null;
+window.$dataSystem       = null;
+window.$dataMapInfos     = null;
+window.$dataMap          = null;
+window.$gameTemp         = null;
+window.$gameSystem       = null;
+window.$gameScreen       = null;
+window.$gameTimer        = null;
+window.$gameMessage      = null;
+window.$gameSwitches     = null;
+window.$gameVariables    = null;
+window.$gameSelfSwitches = null;
+window.$gameActors       = null;
+window.$gameParty        = null;
+window.$gameTroop        = null;
+window.$gameMap          = null;
+window.$gamePlayer       = null;
+window.$testEvent        = null;
 
 DataManager._globalId       = 'RPGMV';
 DataManager._lastAccessedId = 1;
@@ -80,9 +90,11 @@ DataManager.loadDataFile = function(name, src) {
     var url = 'data/' + src;
     xhr.open('GET', url);
     xhr.overrideMimeType('application/json');
+    console.log('DEBUG: start loading', url);
     xhr.onload = function() {
         if (xhr.status < 400) {
             window[name] = JSON.parse(xhr.responseText);
+            console.log('DEBUG: loaded', name);
             DataManager.onLoad(window[name]);
         }
     };
@@ -453,7 +465,7 @@ DataManager.extractSaveContents = function(contents) {
 //
 // The static class that manages the configuration data.
 
-function ConfigManager() {
+export function ConfigManager() {
     throw new Error('This is a static class');
 }
 
@@ -556,7 +568,7 @@ ConfigManager.readVolume = function(config, name) {
 //
 // The static class that manages storage for saving game data.
 
-function StorageManager() {
+export function StorageManager() {
     throw new Error('This is a static class');
 }
 
@@ -687,7 +699,7 @@ StorageManager.webStorageKey = function(savefileId) {
 //
 // The static class that loads images, creates bitmap objects and retains them.
 
-function ImageManager() {
+export function ImageManager() {
     throw new Error('This is a static class');
 }
 
@@ -815,7 +827,7 @@ ImageManager.isZeroParallax = function(filename) {
 //
 // The static class that handles BGM, BGS, ME and SE.
 
-function AudioManager() {
+export function AudioManager() {
     throw new Error('This is a static class');
 }
 
@@ -1199,7 +1211,7 @@ AudioManager.checkWebAudioError = function(webAudio) {
 //
 // The static class that plays sound effects defined in the database.
 
-function SoundManager() {
+export function SoundManager() {
     throw new Error('This is a static class');
 }
 
@@ -1323,7 +1335,7 @@ SoundManager.playUseSkill = function() {
 //
 // The static class that handles terms and messages.
 
-function TextManager() {
+export function TextManager() {
     throw new Error('This is a static class');
 }
 
@@ -1450,7 +1462,7 @@ Object.defineProperties(TextManager, {
 //
 // The static class that manages scene transitions.
 
-function SceneManager() {
+export function SceneManager() {
     throw new Error('This is a static class');
 }
 
@@ -1473,7 +1485,8 @@ SceneManager.run = function(sceneClass) {
         this.goto(sceneClass);
         this.requestUpdate();
     } catch (e) {
-        this.catchException(e);
+        throw e;
+        // this.catchException(e);
     }
 };
 
@@ -1585,6 +1598,8 @@ SceneManager.terminate = function() {
 };
 
 SceneManager.onError = function(e) {
+    throw e; // TODO: debug
+
     console.error(e.message);
     console.error(e.filename, e.lineno);
     try {
@@ -1772,7 +1787,7 @@ SceneManager.backgroundBitmap = function() {
 //
 // The static class that manages battle progress.
 
-function BattleManager() {
+export function BattleManager() {
     throw new Error('This is a static class');
 }
 
@@ -2418,9 +2433,12 @@ BattleManager.gainDropItems = function() {
 //
 // The static class that manages the plugins.
 
-function PluginManager() {
+export function PluginManager() {
     throw new Error('This is a static class');
 }
+
+window.PluginManager = PluginManager;
+window.PluginManager = PluginManager;
 
 PluginManager._path         = 'js/plugins/';
 PluginManager._scripts      = [];

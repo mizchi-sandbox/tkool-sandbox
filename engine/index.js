@@ -1,0 +1,11 @@
+// require("./js/libs/pixi");
+// require("./js/libs/fpsmeter");
+// require("./js/libs/lz-string");
+require("./js/rpg_core");
+require("./js/rpg_managers");
+require("./js/rpg_objects");
+require("./js/rpg_scenes");
+require("./js/rpg_sprites");
+require("./js/rpg_windows");
+require("./js/plugins");
+require("./js/main");

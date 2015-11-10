@@ -3,3 +3,5 @@
 var $plugins =
 [
 ];
+
+window.$plugins = $plugins;
