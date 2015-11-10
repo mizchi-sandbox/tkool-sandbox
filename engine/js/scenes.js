@@ -1,6 +1,6 @@
-import {Stage, Graphics, Sprite, Bitmap, WindowLayer, ScreenSprite, TouchInput, Input} from './rpg_core';
+import {Stage, Graphics, Sprite, Bitmap, WindowLayer, ScreenSprite, TouchInput, Input} from './core';
 import {
-  DataManager, ConfigManager, ImageManager, SoundManager, SceneManager, AudioManager,TextManager} from './rpg_managers';
+  DataManager, ConfigManager, ImageManager, SoundManager, SceneManager, AudioManager,TextManager} from './managers';
 import {
   Window_TitleCommand, Window_MapName, Window_Message, Window_ScrollText,
   Window_MenuStatus, Window_MenuCommand, Window_Gold,
@@ -10,9 +10,9 @@ import {
   Window_Status, Window_Options,
   Window_SavefileList,
   Window_GameEnd
-} from './rpg_windows';
-import {Spriteset_Map} from './rpg_sprites';
-import {Game_Action} from './rpg_objects';
+} from './windows';
+import {Spriteset_Map} from './sprites';
+import {Game_Action} from './objects';
 
 //=============================================================================
 // rpg_scenes.js

@@ -7780,7 +7780,7 @@ JsonEx._encode = function(value, depth) {
  * @private
  */
 JsonEx._decode = function(value) {
-    let GameObjects = require('./rpg_objects');
+    let GameObjects = require('./objects');
     var type = Object.prototype.toString.call(value);
     if (type === '[object Object]' || type === '[object Array]') {
         if (value['@']) {

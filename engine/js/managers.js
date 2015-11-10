@@ -1,12 +1,12 @@
-import {Graphics, Utils, WebAudio, Input, TouchInput, JsonEx} from './rpg_core';
-import {Bitmap, TilingSprite} from './rpg_core';
+import {Graphics, Utils, WebAudio, Input, TouchInput, JsonEx} from './core';
+import {Bitmap, TilingSprite} from './core';
 import {
   Game_Temp, Game_System, Game_Screen,
   Game_Timer, Game_Message, Game_Switches,
   Game_Variables, Game_SelfSwitches,
   Game_Actors, Game_Party, Game_Troop, Game_Map, Game_Player
-} from './rpg_objects';
-import {ScreenSprite} from './rpg_sprites';
+} from './objects';
+import {ScreenSprite} from './sprites';
 
 //=============================================================================
 // rpg_managers.js

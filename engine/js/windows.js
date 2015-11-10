@@ -1,7 +1,7 @@
-import {Window, Bitmap, Rectangle, Graphics, Input, TouchInput, JsonEx} from './rpg_core';
-import {TextManager, DataManager, ImageManager, SoundManager, ConfigManager} from './rpg_managers';
-import {Sprite_Button} from './rpg_sprites';
-import {Game_Action} from './rpg_objects';
+import {Window, Bitmap, Rectangle, Graphics, Input, TouchInput, JsonEx} from './core';
+import {TextManager, DataManager, ImageManager, SoundManager, ConfigManager} from './managers';
+import {Sprite_Button} from './sprites';
+import {Game_Action} from './objects';
 
 //=============================================================================
 // rpg_windows.js
