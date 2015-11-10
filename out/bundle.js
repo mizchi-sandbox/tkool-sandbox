@@ -134,7 +134,7 @@ var $plugins = [];
 window.$plugins = $plugins;
 
 },{}],6:[function(require,module,exports){
-'use strict';Object.defineProperty(exports,'__esModule',{value:true});exports.JsExtensions = JsExtensions;exports.Utils = Utils;exports.Point = Point;exports.Rectangle = Rectangle;exports.Bitmap = Bitmap;exports.Graphics = Graphics;exports.Input = Input;exports.TouchInput = TouchInput;exports.Sprite = Sprite;exports.Tilemap = Tilemap;exports.TilingSprite = TilingSprite;exports.ScreenSprite = ScreenSprite;exports.Window = Window;exports.WindowLayer = WindowLayer;exports.Weather = Weather;exports.ToneFilter = ToneFilter;exports.ToneSprite = ToneSprite;exports.Stage = Stage;exports.WebAudio = WebAudio;exports.Html5Audio = Html5Audio;exports.JsonEx = JsonEx;function _interopRequireWildcard(obj){if(obj && obj.__esModule){return obj;}else {var newObj={};if(obj != null){for(var key in obj) {if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key] = obj[key];}}newObj['default'] = obj;return newObj;}}var _rpg_objects=require('./rpg_objects');var GameObjects=_interopRequireWildcard(_rpg_objects); //=============================================================================
+//=============================================================================
 // rpg_core.js
 //=============================================================================
 //-----------------------------------------------------------------------------
@@ -143,7 +143,7 @@ window.$plugins = $plugins;
  * standard Javascript objects.
  *
  * @class JsExtensions
- */function JsExtensions(){throw new Error('This is not a class');} /**
+ */'use strict';Object.defineProperty(exports,'__esModule',{value:true});exports.JsExtensions = JsExtensions;exports.Utils = Utils;exports.Point = Point;exports.Rectangle = Rectangle;exports.Bitmap = Bitmap;exports.Graphics = Graphics;exports.Input = Input;exports.TouchInput = TouchInput;exports.Sprite = Sprite;exports.Tilemap = Tilemap;exports.TilingSprite = TilingSprite;exports.ScreenSprite = ScreenSprite;exports.Window = Window;exports.WindowLayer = WindowLayer;exports.Weather = Weather;exports.ToneFilter = ToneFilter;exports.ToneSprite = ToneSprite;exports.Stage = Stage;exports.WebAudio = WebAudio;exports.Html5Audio = Html5Audio;exports.JsonEx = JsonEx;function JsExtensions(){throw new Error('This is not a class');} /**
  * Returns a number whose value is limited to the given range.
  *
  * @method Number.prototype.clamp
@@ -2746,7 +2746,7 @@ var node=context.createBufferSource();node.start(0);this._unlocked = true;}}; /*
  * @param {Object} value
  * @return {Object}
  * @private
- */JsonEx._decode = function(value){var type=Object.prototype.toString.call(value);if(type === '[object Object]' || type === '[object Array]'){if(value['@']){ // var constructor = window[value['@']];
+ */JsonEx._decode = function(value){var GameObjects=require('./rpg_objects');var type=Object.prototype.toString.call(value);if(type === '[object Object]' || type === '[object Array]'){if(value['@']){ // var constructor = window[value['@']];
 var constructor=GameObjects[value['@']];if(constructor){value = this._resetPrototype(value,constructor.prototype);}}for(var key in value) {if(value.hasOwnProperty(key)){value[key] = this._decode(value[key]);}}}return value;}; /**
  * @static
  * @method _getConstructorName

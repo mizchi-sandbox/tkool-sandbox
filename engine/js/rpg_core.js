@@ -1,5 +1,3 @@
-import * as GameObjects from './rpg_objects';
-
 //=============================================================================
 // rpg_core.js
 //=============================================================================
@@ -7782,6 +7780,7 @@ JsonEx._encode = function(value, depth) {
  * @private
  */
 JsonEx._decode = function(value) {
+    let GameObjects = require('./rpg_objects');
     var type = Object.prototype.toString.call(value);
     if (type === '[object Object]' || type === '[object Array]') {
         if (value['@']) {
