@@ -8,11 +8,6 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager, AudioManager
 } from '../managers';
 
-import {
-  Window_TitleCommand, Window_MapName, Window_Message, Window_ScrollText,
-  Window_MenuStatus, Window_MenuCommand
-} from '../windows';
-
 //-----------------------------------------------------------------------------
 // Scene_Gameover
 //

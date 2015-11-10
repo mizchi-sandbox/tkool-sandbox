@@ -7,17 +7,9 @@ import {
   AudioManager,TextManager
 } from '../managers';
 import {
-  Window_TitleCommand, Window_MapName, Window_Message, Window_ScrollText,
-  Window_MenuStatus, Window_MenuCommand, Window_Gold,
-  Window_Help, Window_ItemCategory, Window_ItemList,Window_MenuActor,
-  Window_SkillType, Window_SkillStatus, Window_SkillList,
-  Window_EquipStatus, Window_EquipCommand, Window_EquipSlot, Window_EquipItem,
-  Window_Status, Window_Options,
-  Window_SavefileList,
-  Window_GameEnd
+  Window_BattleLog, Window_BattleItem, Window_BattleSkill,
+  Window_BattleActor, Window_BattleEnemy, Window_BattleStatus
 } from '../windows';
-import {Spriteset_Map} from '../sprites';
-import {Game_Action} from '../objects';
 
 //-----------------------------------------------------------------------------
 // Scene_Battle

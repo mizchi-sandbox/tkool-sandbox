@@ -10,8 +10,7 @@ import {
 } from '../managers';
 
 import {
-  Window_TitleCommand, Window_MapName, Window_Message, Window_ScrollText,
-  Window_MenuStatus, Window_MenuCommand
+  Window_TitleCommand
 } from '../windows';
 //-----------------------------------------------------------------------------
 // Scene_Title

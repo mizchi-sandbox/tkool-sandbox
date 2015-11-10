@@ -1,17 +1,10 @@
 import Scene_Base from './SceneBase';
+import {Graphics} from '../core';
 import {
-  Graphics,
-  Sprite,
-  Bitmap, WindowLayer, ScreenSprite, TouchInput, Input
-} from '../core';
-import {
-  DataManager, ConfigManager, ImageManager, SoundManager, SceneManager, AudioManager
+  DataManager, ConfigManager, ImageManager, SoundManager, SceneManager
 } from '../managers';
+import {Window_TitleCommand} from '../windows';
 
-import {
-  Window_TitleCommand, Window_MapName, Window_Message, Window_ScrollText,
-  Window_MenuStatus, Window_MenuCommand
-} from '../windows';
 //-----------------------------------------------------------------------------
 // Scene_Boot
 //
