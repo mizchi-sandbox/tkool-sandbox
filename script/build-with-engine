@@ -5,4 +5,9 @@
 # cp -r www out
 
 # overrides
-cp -r engine/* out/
+rm -r out/js
+mkdir out/js
+cp -r engine/js/libs out/js/libs
+cp -r www/js/plugins out/js/plugins
+cp engine/index.html out/
+browserify -t babelify engine/index.js -o out/bundle.js -i 'nw.gui'

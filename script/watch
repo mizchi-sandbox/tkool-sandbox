@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-watchify -t babelify engine/index.js -o out/index.js -v
+watchify -t babelify engine/index.js -o out/bundle.js -v -i 'nw.gui'
