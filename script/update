@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+cp www/js/plugins.js out/js/
+cp -r www/js/plugins out/js/

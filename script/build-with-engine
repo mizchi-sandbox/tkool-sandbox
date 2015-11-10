@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+### run first
+# rm -r out
+# cp -r www out
+
+# overrides
+cp -r engine/* out/

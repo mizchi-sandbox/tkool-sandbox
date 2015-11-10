@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+watchify -t babelify engine/index.js -o out/index.js -v
