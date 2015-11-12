@@ -6,9 +6,9 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_SkillType, Window_SkillStatus, Window_SkillList
-} from '../windows';
+import Window_SkillType from '../windows/SkillType';
+import Window_SkillStatus from '../windows/SkillType';
+import Window_SkillList from '../windows/SkillList';
 
 //-----------------------------------------------------------------------------
 // Scene_Skill

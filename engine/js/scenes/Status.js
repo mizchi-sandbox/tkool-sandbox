@@ -6,9 +6,7 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_Status
-} from '../windows';
+import Window_Status from '../windows/Status';
 //-----------------------------------------------------------------------------
 // Scene_Status
 //

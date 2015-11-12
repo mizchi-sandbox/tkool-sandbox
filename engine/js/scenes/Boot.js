@@ -3,7 +3,7 @@ import {Graphics} from '../core';
 import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager
 } from '../managers';
-import {Window_TitleCommand} from '../windows';
+import Window_TitleCommand from '../windows/TitleCommand';
 
 //-----------------------------------------------------------------------------
 // Scene_Boot

@@ -6,9 +6,8 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_Options
-} from '../windows';
+import Window_Options from '../windows/Options';
+
 //-----------------------------------------------------------------------------
 // Scene_Options
 //

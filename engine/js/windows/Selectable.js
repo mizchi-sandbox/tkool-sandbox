@@ -1,7 +1,6 @@
-import {Window, Bitmap, Rectangle, Graphics, Input, TouchInput, JsonEx} from '../core';
-import {TextManager, DataManager, ImageManager, SoundManager, ConfigManager} from '../managers';
+import {SoundManager} from '../managers';
 import {Sprite_Button} from '../sprites';
-import {Game_Action} from '../objects';
+import {Window, Bitmap, Rectangle, Graphics, Input, TouchInput, JsonEx} from '../core';
 import Window_Base from './Base';
 
 //-----------------------------------------------------------------------------

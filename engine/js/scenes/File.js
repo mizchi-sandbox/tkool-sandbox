@@ -6,9 +6,8 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_SavefileList, Window_Help
-} from '../windows';
+import Window_SavefileList from '../windows/SaveFileList';
+import Window_Help from '../windows/Help';
 
 //-----------------------------------------------------------------------------
 // Scene_File

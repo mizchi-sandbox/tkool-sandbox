@@ -6,9 +6,11 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_MapName, Window_Message, Window_ScrollText, Window_MenuCommand
-} from '../windows';
+import Window_MapName from '../windows/MapName';
+import Window_Message from '../windows/Message';
+import Window_ScrollText from '../windows/ScrollText';
+import Window_MenuCommand from '../windows/MenuCommand';
+
 import {Spriteset_Map} from '../sprites';
 
 //-----------------------------------------------------------------------------

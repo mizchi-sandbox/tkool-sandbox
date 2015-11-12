@@ -6,10 +6,15 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_Gold, Window_ShopBuy, Window_ShopSell, Window_ShopNumber, Window_ShopStatus, Window_ShopCommand,
-  Window_ItemCategory, Window_Base
-} from '../windows';
+import Window_Base from '../windows/Base';
+import Window_Gold from '../windows/Gold';
+import Window_ShopBuy from '../windows/ShopBuy';
+import Window_ShopSell from '../windows/ShopSell';
+import Window_ShopNumber from '../windows/ShopNumber';
+import Window_ShopStatus from '../windows/ShopStatus';
+import Window_ShopCommand from '../windows/ShopCommand';
+import Window_ItemCategory from '../windows/ItemCategory';
+
 //-----------------------------------------------------------------------------
 // Scene_Shop
 //

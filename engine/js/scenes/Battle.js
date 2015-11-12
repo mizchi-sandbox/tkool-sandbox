@@ -6,10 +6,13 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_BattleLog, Window_BattleItem, Window_BattleSkill,
-  Window_BattleActor, Window_BattleEnemy, Window_BattleStatus
-} from '../windows';
+
+import Window_BattleLog from '../windows/BattleLog';
+import Window_BattleItem from '../windows/BattleItem';
+import Window_BattleSkill from '../windows/BattleSkill';
+import Window_BattleActor from '../windows/BattleActor';
+import Window_BattleEnemy from '../windows/BattleEnemy';
+import Window_BattleStatus from '../windows/BattleStatus';
 
 //-----------------------------------------------------------------------------
 // Scene_Battle

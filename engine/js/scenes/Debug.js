@@ -6,9 +6,8 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_Base, Window_DebugEdit, Window_DebugRange
-} from '../windows';
+import Window_Base from '../windows/Base';
+import Window_DebugRange from '../windows/DebugRange';
 
 //-----------------------------------------------------------------------------
 // Scene_Debug

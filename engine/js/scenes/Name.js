@@ -6,9 +6,8 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_NameEdit, Window_NameInput
-} from '../windows';
+import Window_NameEdit from '../windows/NameEdit';
+import Window_NameInput from '../windows/NameInput';
 //-----------------------------------------------------------------------------
 // Scene_Name
 //

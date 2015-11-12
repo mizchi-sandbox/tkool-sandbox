@@ -6,9 +6,7 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_MenuActor
-} from '../windows';
+import Window_MenuActor from '../windows/MenuActor';
 import {Game_Action} from '../objects';
 //-----------------------------------------------------------------------------
 // Scene_ItemBase

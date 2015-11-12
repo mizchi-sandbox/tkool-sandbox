@@ -9,9 +9,8 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager, AudioManager
 } from '../managers';
 
-import {
-  Window_TitleCommand
-} from '../windows';
+import Window_TitleCommand from '../windows/TitleCommand';
+
 //-----------------------------------------------------------------------------
 // Scene_Title
 //

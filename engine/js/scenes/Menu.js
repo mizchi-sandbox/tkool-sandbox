@@ -6,9 +6,9 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_MenuStatus, Window_MenuCommand, Window_Gold
-} from '../windows';
+import Window_MenuStatus from '../windows/MenuStatus';
+import Window_MenuCommand from '../windows/MenuCommand';
+import Window_Gold from '../windows/Gold';
 // Scene_Menu
 //
 // The scene class of the menu screen.

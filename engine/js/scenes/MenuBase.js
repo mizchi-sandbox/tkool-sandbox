@@ -6,7 +6,7 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {Window_Help} from '../windows';
+import Window_Help from '../windows/Help';
 //-----------------------------------------------------------------------------
 // Scene_MenuBase
 //

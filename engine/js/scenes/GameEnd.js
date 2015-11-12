@@ -6,9 +6,7 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_GameEnd
-} from '../windows';
+import Window_GameEnd from '../windows/GameEnd';
 
 //-----------------------------------------------------------------------------
 // Scene_GameEnd

@@ -6,9 +6,10 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_EquipStatus, Window_EquipCommand, Window_EquipSlot, Window_EquipItem
-} from '../windows';
+import Window_EquipStatus from '../windows/EquipStatus';
+import Window_EquipCommand from '../windows/EquipCommand';
+import Window_EquipSlot from '../windows/EquipSlot';
+import Window_EquipItem from '../windows/EquipItem';
 
 //-----------------------------------------------------------------------------
 // Scene_Equip

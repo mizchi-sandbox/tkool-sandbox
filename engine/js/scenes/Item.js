@@ -6,9 +6,8 @@ import {
   DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
   AudioManager,TextManager
 } from '../managers';
-import {
-  Window_ItemList, Window_ItemCategory
-} from '../windows';
+import Window_ItemList from '../windows/ItemList';
+import Window_ItemCategory from '../windows/ItemCategory';
 //-----------------------------------------------------------------------------
 // Scene_Item
 //
