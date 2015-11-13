@@ -1,15 +1,12 @@
 {
-  "name": "@mizchi/tkool-sandbox",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "babelify": "^6",
-    "minimist": "^1.2.0"
-  }
+    "name": "KADOKAWA/RPGMV",
+    "main": "www/index.html",
+    "js-flags": "--expose-gc",
+    "window": {
+        "title": "",
+        "toolbar": false,
+        "width": 816,
+        "height": 624,
+        "icon": "www/icon/icon.png"
+    }
 }

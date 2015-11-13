@@ -1,4 +1,4 @@
-import Window_MenuActor from './MenuActor';
+import Window_MenuStatus from './MenuStatus';
 import {DataManager} from '../managers';
 import {Game_Action} from '../objects';
 

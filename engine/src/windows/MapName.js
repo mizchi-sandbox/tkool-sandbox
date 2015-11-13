@@ -6,7 +6,7 @@ import {ImageManager} from '../managers';
 //
 // The window for displaying the map name on the map screen.
 
-export function Window_MapName() {
+export default function Window_MapName() {
     this.initialize.apply(this, arguments);
 }
 

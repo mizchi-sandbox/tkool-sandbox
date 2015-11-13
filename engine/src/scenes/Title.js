@@ -1,6 +1,5 @@
 import Scene_Base from './Base';
 import {
-  // Stage,
   Graphics,
   Sprite,
   Bitmap, WindowLayer, ScreenSprite, TouchInput, Input
