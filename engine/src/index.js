@@ -3,14 +3,6 @@
 // require("./js/libs/lz-string");
 require("./core");
 require("./globals");
-require("./managers/DataManager");
-require("./managers/PluginManager");
-require("./managers/ImageManager");
-require("./managers/SceneManager");
-require("./managers/ConfigManager");
-require("./managers/SceneManager");
-require("./managers/SoundManager");
-require("./objects");
 require("./sprites");
 require("./plugins");
 require("./main");

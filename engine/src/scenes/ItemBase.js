@@ -10,7 +10,7 @@ import SceneManager from '../managers/SceneManager';
 import AudioManager from '../managers/AudioManager';
 import TextManager from '../managers/TextManager';
 import Window_MenuActor from '../windows/MenuActor';
-import {Game_Action} from '../objects';
+import Game_Action from '../objects/Action';
 //-----------------------------------------------------------------------------
 // Scene_ItemBase
 //

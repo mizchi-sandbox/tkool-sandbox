@@ -1,12 +1,6 @@
 import {
   Graphics, Utils, WebAudio, Input, TouchInput, JsonEx, Bitmap, TilingSprite
 } from '../core';
-import {
-  Game_Temp, Game_System, Game_Screen,
-  Game_Timer, Game_Message, Game_Switches,
-  Game_Variables, Game_SelfSwitches,
-  Game_Actors, Game_Party, Game_Troop, Game_Map, Game_Player
-} from '../objects';
 
 //-----------------------------------------------------------------------------
 // TextManager

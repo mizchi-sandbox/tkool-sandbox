@@ -1,12 +1,19 @@
 import {
   Graphics, Utils, WebAudio, Input, TouchInput, JsonEx, Bitmap, TilingSprite
 } from '../core';
-import {
-  Game_Temp, Game_System, Game_Screen,
-  Game_Timer, Game_Message, Game_Switches,
-  Game_Variables, Game_SelfSwitches,
-  Game_Actors, Game_Party, Game_Troop, Game_Map, Game_Player
-} from '../objects';
+import Game_Temp from '../objects/Temp';
+import Game_System from '../objects/System';
+import Game_Screen from '../objects/Screen';
+import Game_Timer from '../objects/Timer';
+import Game_Message from '../objects/Message';
+import Game_Switches from '../objects/Switches';
+import Game_Variables from '../objects/Variables';
+import Game_SelfSwitches from '../objects/SelfSwitches';
+import Game_Actors from '../objects/Actors';
+import Game_Party from '../objects/Party';
+import Game_Troop from '../objects/Troop';
+import Game_Map from '../objects/Map';
+import Game_Player from '../objects/Player';
 
 import StorageManager from './StorageManager';
 import ImageManager from './ImageManager';
