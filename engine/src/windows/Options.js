@@ -7,7 +7,7 @@ import {TextManager, SoundManager, ConfigManager} from '../managers';
 //
 // The window for changing various settings on the options screen.
 
-export function Window_Options() {
+export default function Window_Options() {
     this.initialize.apply(this, arguments);
 }
 

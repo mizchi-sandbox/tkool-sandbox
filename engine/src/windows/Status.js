@@ -7,7 +7,7 @@ import {TextManager} from '../managers';
 //
 // The window for displaying full status on the status screen.
 
-export function Window_Status() {
+export default function Window_Status() {
     this.initialize.apply(this, arguments);
 }
 

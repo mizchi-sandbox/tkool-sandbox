@@ -1,4 +1,5 @@
 import Window_Base from './Base';
+import {Graphics} from '../core';
 
 //-----------------------------------------------------------------------------
 // Window_ScrollText

@@ -1,4 +1,5 @@
 import Window_Command from './Command';
+import {TextManager, DataManager} from '../managers';
 
 //-----------------------------------------------------------------------------
 // Window_MenuCommand

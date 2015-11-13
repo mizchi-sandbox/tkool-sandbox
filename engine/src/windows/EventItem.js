@@ -7,7 +7,7 @@ import {Graphics} from '../core';
 //
 // The window used for the event command [Select Item].
 
-export function Window_EventItem() {
+export default function Window_EventItem() {
     this.initialize.apply(this, arguments);
 }
 

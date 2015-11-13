@@ -1,4 +1,5 @@
 import Window_ItemList from './ItemList';
+import {JsonEx} from '../core';
 
 //-----------------------------------------------------------------------------
 // Window_EquipItem
