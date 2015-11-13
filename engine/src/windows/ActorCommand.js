@@ -1,5 +1,6 @@
 import Window_Command from './Command';
-import {TextManager, ConfigManager} from '../managers';
+import TextManager from '../managers/TextManager';
+import ConfigManager from '../managers/ConfigManager';
 import {Graphics} from '../core';
 
 //-----------------------------------------------------------------------------

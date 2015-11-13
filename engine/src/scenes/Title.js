@@ -4,9 +4,13 @@ import {
   Sprite,
   Bitmap, WindowLayer, ScreenSprite, TouchInput, Input
 } from '../core';
-import {
-  DataManager, ConfigManager, ImageManager, SoundManager, SceneManager, AudioManager
-} from '../managers';
+import DataManager from '../managers/DataManager';
+import ConfigManager from '../managers/ConfigManager';
+import ImageManager from '../managers/ImageManager';
+import SoundManager from '../managers/SoundManager';
+import SceneManager from '../managers/SceneManager';
+import AudioManager from '../managers/AudioManager';
+import TextManager from '../managers/TextManager';
 
 import Window_TitleCommand from '../windows/TitleCommand';
 

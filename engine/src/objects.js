@@ -1,7 +1,8 @@
 import {Utils, Graphics, Input} from './core';
-import {
-  ImageManager, DataManager, ConfigManager, AudioManager
-} from './managers';
+import ImageManager from './managers/ImageManager';
+import DataManager from './managers/DataManager';
+import ConfigManager from './managers/ConfigManager';
+import AudioManager from './managers/AudioManager';
 
 //=============================================================================
 // rpg_objects.js

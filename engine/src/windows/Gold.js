@@ -1,5 +1,5 @@
 import Window_Base from './Base';
-import {TextManager} from '../managers';
+import TextManager from '../managers/TextManager';
 
 //-----------------------------------------------------------------------------
 // Window_Gold

@@ -1,6 +1,7 @@
 import Window_Command from './Command';
 import {Graphics} from '../core';
-import {TextManager, BattleManager} from '../managers';
+import TextManager from '../managers/TextManager';
+import BattleManager from '../managers/BattleManager';
 //-----------------------------------------------------------------------------
 // Window_PartyCommand
 //

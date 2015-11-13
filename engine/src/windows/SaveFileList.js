@@ -1,5 +1,6 @@
 import Window_Selectable from './Selectable';
-import {DataManager, TextManager} from '../managers';
+import TextManager from '../managers/TextManager';
+import DataManager from '../managers/DataManager';
 
 //-----------------------------------------------------------------------------
 // Window_SavefileList

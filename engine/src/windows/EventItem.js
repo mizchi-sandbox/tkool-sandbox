@@ -1,5 +1,5 @@
 import Window_ItemList from './ItemList';
-import {DataManager} from '../managers';
+import DataManager from '../managers/DataManager';
 import {Graphics} from '../core';
 
 //-----------------------------------------------------------------------------

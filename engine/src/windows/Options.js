@@ -1,6 +1,8 @@
 import Window_Command from './Command';
 import {Graphics} from '../core';
-import {TextManager, SoundManager, ConfigManager} from '../managers';
+import SoundManager from '../managers/SoundManager';
+import TextManager from '../managers/TextManager';
+import ConfigManager from '../managers/ConfigManager';
 
 //-----------------------------------------------------------------------------
 // Window_Options

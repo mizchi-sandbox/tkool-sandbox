@@ -1,6 +1,6 @@
 import Window_Command from './Command';
 import {Graphics} from '../core';
-import {TextManager} from '../managers';
+import TextManager from '../managers/TextManager';
 
 //-----------------------------------------------------------------------------
 // Window_GameEnd

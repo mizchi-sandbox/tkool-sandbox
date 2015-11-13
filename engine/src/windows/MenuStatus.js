@@ -1,5 +1,5 @@
 import Window_Selectable from './Selectable';
-import {ImageManager} from '../managers';
+import ImageManager from '../managers/ImageManager';
 import {Graphics} from '../core';
 
 //-----------------------------------------------------------------------------

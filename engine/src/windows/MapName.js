@@ -1,5 +1,5 @@
 import Window_Base from './Base';
-import {ImageManager} from '../managers';
+import ImageManager from '../managers/ImageManager';
 
 //-----------------------------------------------------------------------------
 // Window_MapName

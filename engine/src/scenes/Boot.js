@@ -1,8 +1,10 @@
 import Scene_Base from './Base';
 import {Graphics} from '../core';
-import {
-  DataManager, ConfigManager, ImageManager, SoundManager, SceneManager
-} from '../managers';
+import DataManager from '../managers/DataManager';
+import ConfigManager from '../managers/ConfigManager';
+import ImageManager from '../managers/ImageManager';
+import SoundManager from '../managers/SoundManager';
+import SceneManager from '../managers/SceneManager';
 import Window_TitleCommand from '../windows/TitleCommand';
 
 //-----------------------------------------------------------------------------

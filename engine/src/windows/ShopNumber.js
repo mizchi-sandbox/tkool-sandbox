@@ -1,5 +1,7 @@
 import Window_Selectable from './Selectable';
-import {TextManager, SoundManager, ImageManager} from '../managers';
+import TextManager from '../managers/TextManager';
+import SoundManager from '../managers/SoundManager';
+import ImageManager from '../managers/ImageManager';
 import {Sprite_Button} from '../sprites';
 
 //-----------------------------------------------------------------------------

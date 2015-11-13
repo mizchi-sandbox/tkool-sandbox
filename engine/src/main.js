@@ -1,7 +1,8 @@
 //=============================================================================
 // main.js
 //=============================================================================
-import {SceneManager, PluginManager} from './managers';
+import SceneManager from './managers/SceneManager';
+import PluginManager from './managers/PluginManager';
 import Scene_Boot from './scenes/Boot';
 PluginManager.setup($plugins);
 

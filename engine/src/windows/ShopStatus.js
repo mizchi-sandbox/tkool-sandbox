@@ -1,5 +1,7 @@
 import Window_Base from './Base';
-import {DataManager, SoundManager, TextManager} from '../managers';
+import DataManager from '../managers/DataManager';
+import SoundManager from '../managers/SoundManager';
+import TextManager from '../managers/TextManager';
 
 //-----------------------------------------------------------------------------
 // Window_ShopStatus

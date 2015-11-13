@@ -1,5 +1,5 @@
 import {Sprite, Graphics, ScreenSprite, TilingSprite, Tilemap, Bitmap, Weather, ToneFilter, Rectangle} from './core';
-import {ImageManager} from './managers';
+import ImageManager from './managers/ImageManager';
 //=============================================================================
 // rpg_sprites.js
 //=============================================================================

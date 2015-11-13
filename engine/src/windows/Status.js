@@ -1,6 +1,6 @@
 import Window_Selectable from './Selectable';
 import {Graphics} from '../core';
-import {TextManager} from '../managers';
+import TextManager from '../managers/TextManager';
 
 //-----------------------------------------------------------------------------
 // Window_Status

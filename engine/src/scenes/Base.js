@@ -1,10 +1,11 @@
 import {
   Stage, Graphics, Sprite, Bitmap, WindowLayer, ScreenSprite, TouchInput, Input
 } from '../core';
-import {
-  ImageManager, SoundManager, SceneManager,
-  AudioManager,TextManager
-} from '../managers';
+import ImageManager from '../managers/ImageManager';
+import SoundManager from '../managers/SoundManager';
+import SceneManager from '../managers/SceneManager';
+import AudioManager from '../managers/AudioManager';
+import TextManager from '../managers/TextManager';
 
 //-----------------------------------------------------------------------------
 // Scene_Base

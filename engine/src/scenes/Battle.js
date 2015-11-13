@@ -2,10 +2,14 @@ import Scene_Base from './Base';
 import {
   Stage, Graphics, Sprite, Bitmap, WindowLayer, ScreenSprite, TouchInput, Input
 } from '../core';
-import {
-  DataManager, ConfigManager, ImageManager, SoundManager, SceneManager,
-  AudioManager,TextManager
-} from '../managers';
+
+import DataManager from '../managers/DataManager';
+import ConfigManager from '../managers/ConfigManager';
+import ImageManager from '../managers/ImageManager';
+import SoundManager from '../managers/SoundManager';
+import SceneManager from '../managers/SceneManager';
+import AudioManager from '../managers/AudioManager';
+import TextManager from '../managers/TextManager';
 
 import Window_BattleLog from '../windows/BattleLog';
 import Window_BattleItem from '../windows/BattleItem';

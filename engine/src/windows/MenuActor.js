@@ -1,5 +1,5 @@
 import Window_MenuStatus from './MenuStatus';
-import {DataManager} from '../managers';
+import DataManager from '../managers/DataManager';
 import {Game_Action} from '../objects';
 
 //-----------------------------------------------------------------------------

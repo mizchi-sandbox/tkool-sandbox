@@ -1,5 +1,6 @@
 import {Window, Bitmap, Input, TouchInput, JsonEx} from '../core';
-import {TextManager, ImageManager} from '../managers';
+import TextManager from '../managers/TextManager';
+import ImageManager from '../managers/ImageManager';
 
 //=============================================================================
 // rpg_windows.js

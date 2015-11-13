@@ -1,4 +1,4 @@
-import {SoundManager} from '../managers';
+import SoundManager from '../managers/SoundManager';
 import {Sprite_Button} from '../sprites';
 import {Window, Bitmap, Rectangle, Graphics, Input, TouchInput, JsonEx} from '../core';
 import Window_Base from './Base';

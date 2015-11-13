@@ -1,5 +1,7 @@
 import Window_Selectable from './Selectable';
-import {TextManager, SoundManager, DataManager} from '../managers';
+import TextManager from '../managers/TextManager';
+import SoundManager from '../managers/SoundManager';
+import DataManager from '../managers/DataManager';
 import {Graphics} from '../core';
 //-----------------------------------------------------------------------------
 // Window_BattleLog

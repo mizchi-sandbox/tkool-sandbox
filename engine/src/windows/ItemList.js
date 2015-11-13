@@ -1,5 +1,5 @@
 import Window_Selectable from './Selectable';
-import {DataManager} from '../managers';
+import DataManager from '../managers/DataManager';
 
 //-----------------------------------------------------------------------------
 // Window_ItemList

@@ -1,6 +1,8 @@
 import Window_Command from './Command';
 import {Graphics} from '../core';
-import {TextManager, DataManager} from '../managers';
+import TextManager from '../managers/TextManager';
+import DataManager from '../managers/DataManager';
+
 //-----------------------------------------------------------------------------
 // Window_TitleCommand
 //

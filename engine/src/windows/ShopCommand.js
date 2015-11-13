@@ -1,5 +1,5 @@
 import Window_HorzCommand from './HorzCommand';
-import {TextManager} from '../managers';
+import TextManager from '../managers/TextManager';
 
 //-----------------------------------------------------------------------------
 // Window_ShopCommand

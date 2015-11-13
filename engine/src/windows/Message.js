@@ -3,7 +3,7 @@ import Window_Gold from './Gold';
 import Window_ChoiceList from './ChoiceList';
 import Window_NumberInput from './NumberInput';
 import Window_EventItem from './EventItem';
-import {ImageManager} from '../managers';
+import ImageManager from '../managers/ImageManager';
 import {Graphics} from '../core';
 
 //-----------------------------------------------------------------------------
