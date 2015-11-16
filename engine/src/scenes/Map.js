@@ -14,7 +14,7 @@ import Window_Message from '../windows/Message';
 import Window_ScrollText from '../windows/ScrollText';
 import Window_MenuCommand from '../windows/MenuCommand';
 
-import {Spriteset_Map} from '../sprites';
+import Spriteset_Map from '../sprites/SpritesetMap';
 
 //-----------------------------------------------------------------------------
 // Scene_Map

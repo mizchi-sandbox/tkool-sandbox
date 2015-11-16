@@ -2,7 +2,7 @@ import Window_Selectable from './Selectable';
 import TextManager from '../managers/TextManager';
 import SoundManager from '../managers/SoundManager';
 import ImageManager from '../managers/ImageManager';
-import {Sprite_Button} from '../sprites';
+import Sprite_Button from '../sprites/Button';
 
 //-----------------------------------------------------------------------------
 // Window_ShopNumber

@@ -2,7 +2,13 @@
 // require("./js/libs/fpsmeter");
 // require("./js/libs/lz-string");
 require("./core");
-require("./globals");
-require("./sprites");
+require("./$globals");
 require("./plugins");
-require("./main");
+
+import SceneManager from './managers/SceneManager';
+import PluginManager from './managers/PluginManager';
+import Scene_Boot from './scenes/Boot';
+PluginManager.setup($plugins);
+window.onload = function() {
+    SceneManager.run(Scene_Boot);
+};
